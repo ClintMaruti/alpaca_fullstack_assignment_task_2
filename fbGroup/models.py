@@ -40,7 +40,7 @@ class Comments(models.Model):
     post = models.ForeignKey(Posts, on_delete=models.CASCADE)
     name = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField()
-    created_on = models.DateField(auto_now=True, auto_now_add=True)
+    created_on = models.DateField(auto_now_add=True)
 
     class Meta:
         ordering = ['created_on']
